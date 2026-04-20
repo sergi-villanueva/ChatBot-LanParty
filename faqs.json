@@ -1,46 +1,52 @@
 [
-    {
-        "pregunta": "quin es l'horari de la lan?",
-        "resposta": "L'entrada i muntatge comença el dissabte a les 10:00h. L'esdeveniment acaba el diumenge a les 17:00h (l'internet es talla a les 16:00h)."
-    },
-    {
-        "pregunta": "quan son els tornejos?",
-        "resposta": "Les classificatòries comencen dissabte a les 16:00h i les finals són diumenge d'11:00h a 13:00h."
-    },
-    {
-        "pregunta": "on em puc dutxar?",
-        "resposta": "Pots anar a les dutxes de la Illa Esportiva el diumenge de 08:30h a 11:00h. No oblidis portar la pulsera posada!"
-    },
-    {
-        "pregunta": "no tinc internet, que faig?",
-        "resposta": "Revisa que el cable estigui ben connectat i que no tinguis una IP fixa (posa DHCP automàtic). El WiFi del pavelló no és per jugar!"
-    },
-    {
-        "pregunta": "puc portar una cafetera o ventilador?",
-        "resposta": "No! La regla d'or és: només una torre/portàtil i un monitor. Dispositius extra poden fer caure l'electricitat de tota la fila."
-    },
-    {
-        "pregunta": "on es pot dormir?",
-        "resposta": "A les grades o sales annexes amb el teu sac i esterilla. Si ronques fort, demana perdó per avançat!"
-    },
-    {
-        "pregunta": "quina es la direccio per demanar menjar?",
-        "resposta": "La direcció per als repartidors és Avinguda Pau Casals, 16. Has d'anar a recollir la comanda a la porta exterior."
-    },
-    {
-        "pregunta": "que faig amb la escombraria?",
-        "resposta": "Cada taula ha de quedar neta. Tens contenidors de reciclatge a l'entrada del pavelló."
-    },
-    {
-        "pregunta": "hi ha microones?",
-        "resposta": "Sí, hi ha una zona al hall amb microones i neveres comunes. Marca el teu menjar amb el teu nom!"
-    },
-    {
-        "pregunta": "com reconec als organitzadors?",
-        "resposta": "Busca la gent de l'Staff (Asalcai) amb la samarreta oficial. Si hi ha problemes de xarxa, ves a la mesa de control."
-    },
-    {
-        "pregunta": "soc menor, que necessito?",
-        "resposta": "Si et quedes a dormir, has de lliurar l'autorització signada físicament al control d'entrada."
-    }
+  { "id": 1, "categoria": "Logística", "slug": "horaris-acces", "pregunta": "Quins són els horaris d'accés al recinte?", "resposta": "L'accés general s'obre el divendres a les 10:00h i romandrà obert les 24h fins al diumenge a les 18:00h.", "keywords": ["horari", "entrada", "apertura", "tancament"], "urgencia": "mitjana" },
+  { "id": 2, "categoria": "Logística", "slug": "documentacio-necessaria", "pregunta": "Quina documentació he de presentar a l'entrada?", "resposta": "És obligatori el DNI original i l'entrada en format digital o imprès per a l'acreditació.", "keywords": ["dni", "identificació", "entrada", "tiquet"], "urgencia": "alta" },
+  { "id": 3, "categoria": "Logística", "slug": "autoritzacio-menors", "pregunta": "Quins són els requisits per als menors d'edat?", "resposta": "Els menors de 16 anys han d'anar acompanyats d'un tutor. Tots els menors de 18 necessiten l'autorització signada descarregable a la web.", "keywords": ["menors", "autorització", "pares", "edat"], "urgencia": "alta" },
+  { "id": 4, "categoria": "Logística", "slug": "espai-taula", "pregunta": "Quina mida té el meu espai de reserva?", "resposta": "Cada participant disposa d'un espai de 80x60 cm a la taula i una cadira bàsica d'oficina.", "keywords": ["taula", "espai", "mida", "dimensions"], "urgencia": "baixa" },
+  { "id": 5, "categoria": "Logística", "slug": "aparcament", "pregunta": "Hi ha zona d'aparcament per a participants?", "resposta": "Sí, el recinte disposa d'un pàrquing gratuït amb vigilància no presencial les 24 hores.", "keywords": ["pàrquing", "cotxe", "aparcament", "vehicle"], "urgencia": "baixa" },
+  { "id": 6, "categoria": "Xarxa", "slug": "configuracio-ip", "pregunta": "Com rebré la meva adreça IP?", "resposta": "La xarxa està configurada mitjançant DHCP. No està permès configurar IPs estàtiques manualment.", "keywords": ["dhcp", "ip", "configuració", "xarxa"], "urgencia": "alta" },
+  { "id": 7, "categoria": "Xarxa", "slug": "cable-recomanat", "pregunta": "Quin tipus de cable de xarxa he de portar?", "resposta": "Es recomana cable RJ45 Cat6 o superior de mínim 10 metres per garantir la velocitat de 1Gbps.", "keywords": ["cable", "rj45", "cat6", "ethernet"], "urgencia": "mitjana" },
+  { "id": 8, "categoria": "Xarxa", "slug": "servidor-cache", "pregunta": "Hi ha algun sistema per accelerar les descàrregues?", "resposta": "Sí, disposem d'un servidor SteamCache local que optimitza les actualitzacions dels jocs més populars.", "keywords": ["steam", "cache", "descàrrega", "velocitat"], "urgencia": "baixa" },
+  { "id": 9, "categoria": "Xarxa", "slug": "ports-oberts", "pregunta": "Tots els ports de joc estan oberts?", "resposta": "La majoria de ports per a gaming i streaming estan oberts. El P2P i trànsit maliciós està bloquejat per firewall.", "keywords": ["ports", "firewall", "jocs", "p2p"], "urgencia": "mitjana" },
+  { "id": 10, "categoria": "Xarxa", "slug": "wifi-disponible", "pregunta": "Hi ha Wi-Fi per a dispositius mòbils?", "resposta": "Sí, disposem d'una xarxa Wi-Fi 6 separada per a mòbils, tot i que el trànsit de jocs té prioritat al cable.", "keywords": ["wifi", "wireless", "mòbil", "connexió"], "urgencia": "baixa" },
+  { "id": 11, "categoria": "Elèctrica", "slug": "preses-corrent", "pregunta": "Quants endolls tindré disponibles?", "resposta": "L'organització proveeix una sola presa per usuari. És obligatori portar una regleta (lladre) pròpia.", "keywords": ["endoll", "corrent", "regleta", "lladre"], "urgencia": "alta" },
+  { "id": 12, "categoria": "Elèctrica", "slug": "limit-potencia", "pregunta": "Hi ha un límit de potència per cada lloc?", "resposta": "El consum màxim permesa és de 450W per usuari (PC + Monitor). No es permeten electrodomèstics de gran consum.", "keywords": ["potència", "watts", "limit", "electricitat"], "urgencia": "alta" },
+  { "id": 13, "categoria": "Elèctrica", "slug": "ús-de-sai", "pregunta": "Està permès l'ús de sistemes SAI (UPS)?", "resposta": "Sí, és recomanable portar el teu propi SAI per protegir l'equip davant de possibles microtalls de xarxa elèctrica.", "keywords": ["sai", "ups", "bateria", "protecció"], "urgencia": "baixa" },
+  { "id": 14, "categoria": "Elèctrica", "slug": "sobrecarrega-linia", "pregunta": "Què faig si em quedo sense llum a la meva fila?", "resposta": "No manipulis el quadre elèctric. Avisa immediatament a l'staff tècnic per rearmar el diferencial.", "keywords": ["llum", "diferencial", "avaria", "apagada"], "urgencia": "alta" },
+  { "id": 15, "categoria": "Normativa", "slug": "comportament-toxic", "pregunta": "Quina és la política contra el comportament tòxic?", "resposta": "Tolerància zero. Qualsevol insult, assetjament o actitud ofensiva comportarà l'expulsió immediata sense reemborsament.", "keywords": ["comportament", "tòxic", "expulsió", "normes"], "urgencia": "alta" },
+  { "id": 16, "categoria": "Normativa", "slug": "ús-auriculars", "pregunta": "Puc portar altaveus externs?", "resposta": "No. Per garantir la convivència, és obligatori l'ús d'auriculars en tot moment.", "keywords": ["altaveus", "so", "auriculars", "soroll"], "urgencia": "mitjana" },
+  { "id": 17, "categoria": "Normativa", "slug": "prohibicio-alcohol", "pregunta": "Es pot consumir alcohol dins del pavelló?", "resposta": "Està totalment prohibit l'accés i consum de begudes alcohòliques a tot el recinte de la LAN.", "keywords": ["alcohol", "beguda", "prohibició", "cervesa"], "urgencia": "alta" },
+  { "id": 18, "categoria": "Normativa", "slug": "fumar-vapejar", "pregunta": "Està permès fumar o utilitzar vapers?", "resposta": "Dins del pavelló no es pot fumar ni vapejar. Cal dirigir-se a les zones exteriors senyalitzades.", "keywords": ["fumar", "tabac", "vaper", "fum"], "urgencia": "mitjana" },
+  { "id": 19, "categoria": "Normativa", "slug": "trampes-cheats", "pregunta": "Quines són les conseqüències d'utilitzar trampes (cheats)?", "resposta": "L'ús de cheats en qualsevol joc, sigui competitiu o no, suposa la desqualificació i el bloqueig de xarxa.", "keywords": ["trampes", "cheats", "hacks", "ban"], "urgencia": "alta" },
+  { "id": 20, "categoria": "Serveis", "slug": "zona-descans", "pregunta": "Com funciona la zona de descans?", "resposta": "És una zona compartida i silenciosa. Has de portar el teu propi matalàs inflable o sac de dormir.", "keywords": ["dormir", "descans", "sac", "matalàs"], "urgencia": "baixa" },
+  { "id": 21, "categoria": "Serveis", "slug": "dutxes-higiene", "pregunta": "Hi haurà servei de dutxes?", "resposta": "Sí, el pavelló té vestidors amb dutxes d'aigua calenta disponibles les 24 hores.", "keywords": ["dutxa", "higiene", "vestidor", "bany"], "urgencia": "mitjana" },
+  { "id": 22, "categoria": "Serveis", "slug": "menjar-exterior", "pregunta": "Puc demanar menjar a domicili?", "resposta": "Sí, però hauràs de recollir la comanda personalment a la porta principal de seguretat.", "keywords": ["menjar", "pizza", "domicili", "comanda"], "urgencia": "baixa" },
+  { "id": 23, "categoria": "Serveis", "slug": "microones-comuns", "pregunta": "Hi haurà microones d'ús públic?", "resposta": "Sí, hi haurà una zona d'office amb microones per escalfar el menjar que portis de casa.", "keywords": ["microones", "escalfar", "menjar", "cuina"], "urgencia": "baixa" },
+  { "id": 24, "categoria": "Serveis", "slug": "assistencia-medica", "pregunta": "Què faig en cas d'emergència mèdica?", "resposta": "Contacta amb qualsevol membre de l'staff. Hi ha un punt de primers auxilis amb personal titulat 24h.", "keywords": ["metge", "emergència", "salut", "accident"], "urgencia": "alta" },
+  { "id": 25, "categoria": "Tornejos", "slug": "inscripcio-tornejos", "pregunta": "Com m'inscric als tornejos?", "resposta": "Les inscripcions es fan mitjançant l'Intranet de la LAN un cop estiguis connectat a la xarxa local.", "keywords": ["torneig", "inscripció", "competició", "jugar"], "urgencia": "mitjana" },
+  { "id": 26, "categoria": "Tornejos", "slug": "premis-pagament", "pregunta": "Com i quan s'entreguen els premis?", "resposta": "Els premis es lliuraran diumenge a la tarda durant la cerimònia de clausura. Cal presentar DNI per cobrar.", "keywords": ["premis", "diners", "clausura", "guanyadors"], "urgencia": "baixa" },
+  { "id": 27, "categoria": "Logística", "slug": "consigna-valors", "pregunta": "Hi haurà servei de consigna per a objectes de valor?", "resposta": "L'organització no es fa responsable d'objectes perduts. Recomanem utilitzar cadenats per a la torre i perifèrics.", "keywords": ["seguretat", "robatori", "consigna", "valor"], "urgencia": "mitjana" },
+  { "id": 28, "categoria": "Xarxa", "slug": "streaming-bitrate", "pregunta": "Puc fer streaming des de la meva plaça?", "resposta": "Sí, es permet el streaming a un màxim de 6000kbps per no saturar la sortida general d'Internet.", "keywords": ["twitch", "streaming", "bitrate", "pujada"], "urgencia": "mitjana" },
+  { "id": 29, "categoria": "Elèctrica", "slug": "iluminacio-led", "pregunta": "Puc posar tires LED a la meva taula?", "resposta": "Sí, sempre que estiguin ben aïllades i no produeixin interferències ni molèsties als veïns.", "keywords": ["led", "llum", "decoració", "rgb"], "urgencia": "baixa" },
+  { "id": 30, "categoria": "Normativa", "slug": "rgpd-imatge", "pregunta": "Es gravaran vídeos o fotos durant l'esdeveniment?", "resposta": "Sí, en acceptar l'entrada cedeixes els drets d'imatge per a la comunicació i promoció de l'esdeveniment (RGPD).", "keywords": ["fotos", "vídeo", "privacitat", "imatge"], "urgencia": "mitjana" },
+  { "id": 31, "categoria": "Logística", "slug": "segon-monitor", "pregunta": "Puc portar un segon monitor?", "resposta": "Sempre que no superis l'espai de 80cm assignat i tinguis prou endolls a la teva regleta.", "keywords": ["monitor", "pantalla", "dual", "espai"], "urgencia": "baixa" },
+  { "id": 32, "categoria": "Xarxa", "slug": "routers-propis", "pregunta": "Puc connectar el meu propi router o switch?", "resposta": "No. La connexió d'equips de xarxa aliens a l'organització pot causar bucles i caigudes de xarxa.", "keywords": ["router", "switch", "xarxa", "prohibit"], "urgencia": "alta" },
+  { "id": 33, "categoria": "Tornejos", "slug": "reclamacions-arbitratge", "pregunta": "Com puc reclamar el resultat d'una partida?", "resposta": "Hauràs de demanar l'arbitratge a l'staff del torneig en un màxim de 10 minuts després de la partida.", "keywords": ["àrbitre", "reclamació", "partida", "error"], "urgencia": "mitjana" },
+  { "id": 34, "categoria": "Normativa", "slug": "entrades-sortides-nit", "pregunta": "Es pot entrar i sortir del recinte a la nit?", "resposta": "Sí, el control d'accessos funciona les 24h, però cal mantenir el silenci a l'exterior del pavelló.", "keywords": ["nit", "sortida", "seguretat", "horari"], "urgencia": "baixa" },
+  { "id": 35, "categoria": "Serveis", "slug": "botiga-hardware", "pregunta": "Hi haurà venda de material informàtic?", "resposta": "Hi haurà un estand col·laborador amb perifèrics bàsics, cables i consumibles per a urgències.", "keywords": ["botiga", "compra", "ratolí", "teclat"], "urgencia": "baixa" },
+  { "id": 36, "categoria": "Xarxa", "slug": "vpn-gaming", "pregunta": "Puc utilitzar serveis de VPN?", "resposta": "L'ús de VPN està permès, però no donem suport tècnic si la teva latència augmenta degut a això.", "keywords": ["vpn", "seguretat", "lag", "latència"], "urgencia": "baixa" },
+  { "id": 37, "categoria": "Elèctrica", "slug": "assecadors-electrodomestics", "pregunta": "Puc portar l'assecador de cabell?", "resposta": "Només es permet l'ús d'assecadors als vestidors. Mai a la zona de taules per evitar incendis.", "keywords": ["assecador", "higiene", "electricitat", "seguretat"], "urgencia": "alta" },
+  { "id": 38, "categoria": "Logística", "slug": "cadira-propia", "pregunta": "Puc portar la meva cadira de gaming?", "resposta": "Sí, és molt recomanable. L'organització en facilita una de plàstic estàndard si no la portes.", "keywords": ["cadira", "comoditat", "gaming", "seient"], "urgencia": "baixa" },
+  { "id": 39, "categoria": "Serveis", "slug": "objectes-perduts", "pregunta": "On puc trobar objectes que hagi perdut?", "resposta": "Tots els objectes trobats es portaran al Punt d'Informació Central durant tot l'esdeveniment.", "keywords": ["perdut", "trobat", "claus", "cartera"], "urgencia": "baixa" },
+  { "id": 40, "categoria": "Normativa", "slug": "privacitat-streaming", "pregunta": "Puc gravar als altres participants?", "resposta": "Has de tenir el consentiment explícit si la persona és el centre de la teva gravació o streaming.", "keywords": ["privacitat", "gravació", "vídeo", "drets"], "urgencia": "mitjana" },
+  { "id": 41, "categoria": "Xarxa", "slug": "prioritat-trafic", "pregunta": "Quin tipus de trànsit té prioritat a la xarxa?", "resposta": "El trànsit de jocs (UDP) té la prioritat més alta, seguit pel streaming i finalment les descàrregues HTTP.", "keywords": ["qos", "prioritat", "lag", "jocs"], "urgencia": "baixa" },
+  { "id": 42, "categoria": "Elèctrica", "slug": "regletes-estat", "pregunta": "Quins requisits ha de complir la meva regleta?", "resposta": "Ha de tenir certificació CE, interruptor de seguretat i cable en bon estat sense empalmaments casolans.", "keywords": ["regleta", "ce", "seguretat", "incendi"], "urgencia": "alta" },
+  { "id": 43, "categoria": "Tornejos", "slug": "servidors-propis-joc", "pregunta": "Puc muntar un servidor de joc per als meus amics?", "resposta": "Sí, sempre que sigui dins de la xarxa local i no consumeixi una amplada de banda excessiva.", "keywords": ["servidor", "dedicat", "lan", "host"], "urgencia": "baixa" },
+  { "id": 44, "categoria": "Logística", "slug": "recollida-equips", "pregunta": "Quan he de recollir les meves coses diumenge?", "resposta": "Tots els equips han d'estar desconnectats i fora del recinte abans de les 18:30h del diumenge.", "keywords": ["recollida", "final", "diumenge", "neteja"], "urgencia": "mitjana" },
+  { "id": 45, "categoria": "Serveis", "slug": "fonts-aigua", "pregunta": "Hi ha aigua potable gratuïta?", "resposta": "Sí, hi ha fonts d'aigua potable prop de les zones de banys a disposició dels participants.", "keywords": ["aigua", "beure", "font", "gratuït"], "urgencia": "baixa" },
+  { "id": 46, "categoria": "Normativa", "slug": "venda-articles", "pregunta": "Puc vendre productes o marxandatge a la meva plaça?", "resposta": "No. La venda ambulant i l'activitat comercial sense autorització prèvia està prohibida.", "keywords": ["vendre", "botiga", "marxandatge", "comerci"], "urgencia": "mitjana" },
+  { "id": 47, "categoria": "Xarxa", "slug": "suport-tecnic-software", "pregunta": "L'staff m'ajudarà a instal·lar jocs?", "resposta": "No, l'staff només dóna suport a la connectivitat de xarxa, no a problemes de programari privats.", "keywords": ["suport", "ajuda", "instal·lació", "software"], "urgencia": "baixa" },
+  { "id": 48, "categoria": "Logística", "slug": "carregues-descarregues", "pregunta": "Com puc descarregar el meu PC del cotxe?", "resposta": "Hi haurà una zona de càrrega i descàrrega ràpida (max 15 minuts) prop de l'entrada principal.", "keywords": ["cotxe", "descàrrega", "pc", "transport"], "urgencia": "mitjana" },
+  { "id": 49, "categoria": "Elèctrica", "slug": "microtalls-garantia", "pregunta": "L'organització es fa càrrec si se m'avaria la font d'alimentació?", "resposta": "No. L'organització proveeix energia segons estàndards, l'ús de proteccions (SAI) és responsabilitat de l'usuari.", "keywords": ["avaria", "garantia", "font", "responsabilitat"], "urgencia": "mitjana" },
+  { "id": 50, "categoria": "Serveis", "slug": "wifi-visites", "pregunta": "Hi ha Wi-Fi per als visitants que no participen?", "resposta": "No, la xarxa està reservada exclusivament per als participants amb entrada acreditada.", "keywords": ["visitants", "públic", "wifi", "accés"], "urgencia": "baixa" }
 ]
