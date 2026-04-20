@@ -7,90 +7,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:        #090b10;
-      --surface:   #0d1117;
-      --border:    #1f2d3d;
-      --accent:    #00ffe1;
-      --accent2:   #ff3cac;
-      --accent3:   #ffe600;
-      --text:      #c9d8e8;
-      --text-dim:  #5a7a8a;
-      --bot-bg:    #0f1e2a;
-      --user-bg:   #0a1f1a;
-      --font-mono: 'Share Tech Mono', monospace;
-      --font-head: 'Orbitron', monospace;
-      --glow:      0 0 8px var(--accent), 0 0 20px rgba(0,255,225,0.3);
-      --glow2:     0 0 8px var(--accent2), 0 0 20px rgba(255,60,172,0.3);
+      --bg:#090b10;--surface:#0d1117;--border:#1f2d3d;--accent:#00ffe1;--accent2:#ff3cac;
+      --accent3:#ffe600;--text:#c9d8e8;--text-dim:#5a7a8a;--bot-bg:#0f1e2a;--user-bg:#0a1f1a;
+      --font-mono:'Share Tech Mono',monospace;--font-head:'Orbitron',monospace;
+      --glow:0 0 8px var(--accent),0 0 20px rgba(0,255,225,0.3);
+      --glow2:0 0 8px var(--accent2),0 0 20px rgba(255,60,172,0.3);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      font-family: var(--font-mono);
-      color: var(--text);
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 4px);
-      pointer-events: none;
-      z-index: 999;
-    }
-    .chat-window {
-      width: min(480px, 100vw);
-      height: min(640px, 100vh);
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--accent);
-      box-shadow: var(--glow), inset 0 0 40px rgba(0,255,225,0.03);
-      background: var(--surface);
-      position: relative;
-      animation: fadeIn 0.6s ease;
-    }
-    @keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-    .chat-window::before,.chat-window::after{content:'';position:absolute;width:14px;height:14px;border-color:var(--accent2);border-style:solid;}
-    .chat-window::before{top:-1px;left:-1px;border-width:2px 0 0 2px;}
-    .chat-window::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
-    .chat-header{padding:14px 20px;background:#0a0e14;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-shrink:0;}
-    .bot-avatar{width:38px;height:38px;border:1.5px solid var(--accent);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--glow);flex-shrink:0;background:#050810;}
-    .header-info{flex:1;}
-    .bot-name{font-family:var(--font-head);font-size:13px;font-weight:900;color:var(--accent);text-shadow:var(--glow);letter-spacing:2px;}
-    .bot-status{font-size:10px;color:var(--text-dim);letter-spacing:1px;margin-top:2px;}
-    .bot-status::before{content:'▶ ';color:#00ff88;animation:blink 1.5s step-end infinite;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);font-family:var(--font-mono);color:var(--text);height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 4px);pointer-events:none;z-index:999}
+    .chat-window{width:min(480px,100vw);height:min(640px,100vh);display:flex;flex-direction:column;border:1px solid var(--accent);box-shadow:var(--glow),inset 0 0 40px rgba(0,255,225,0.03);background:var(--surface);position:relative;animation:fadeIn .6s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .chat-window::before,.chat-window::after{content:'';position:absolute;width:14px;height:14px;border-color:var(--accent2);border-style:solid}
+    .chat-window::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+    .chat-window::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+    .chat-header{padding:14px 20px;background:#0a0e14;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .bot-avatar{width:38px;height:38px;border:1.5px solid var(--accent);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--glow);flex-shrink:0;background:#050810}
+    .header-info{flex:1}
+    .bot-name{font-family:var(--font-head);font-size:13px;font-weight:900;color:var(--accent);text-shadow:var(--glow);letter-spacing:2px}
+    .bot-status{font-size:10px;color:var(--text-dim);letter-spacing:1px;margin-top:2px}
+    .bot-status::before{content:'▶ ';color:#00ff88;animation:blink 1.5s step-end infinite}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-    .header-badge{font-size:9px;font-family:var(--font-head);color:var(--accent2);border:1px solid var(--accent2);padding:3px 6px;letter-spacing:1px;text-shadow:var(--glow2);}
-    .chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;}
-    .chat-messages::-webkit-scrollbar{width:4px;}
-    .chat-messages::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-    .msg{max-width:88%;padding:10px 14px;font-size:13px;line-height:1.6;border-radius:2px;position:relative;}
-    .msg.bot{background:var(--bot-bg);border-left:2px solid var(--accent);color:var(--text);align-self:flex-start;animation:msgIn 0.25s ease;}
-    .msg.user{background:var(--user-bg);border-right:2px solid var(--accent2);color:var(--accent);align-self:flex-end;text-align:right;animation:msgInRight 0.25s ease;}
+    .header-badge{font-size:9px;font-family:var(--font-head);color:var(--accent2);border:1px solid var(--accent2);padding:3px 6px;letter-spacing:1px;text-shadow:var(--glow2)}
+    .chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+    .chat-messages::-webkit-scrollbar{width:4px}
+    .chat-messages::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+    .msg{max-width:88%;padding:10px 14px;font-size:13px;line-height:1.6;border-radius:2px}
+    .msg.bot{background:var(--bot-bg);border-left:2px solid var(--accent);color:var(--text);align-self:flex-start;animation:msgIn .25s ease}
+    .msg.user{background:var(--user-bg);border-right:2px solid var(--accent2);color:var(--accent);align-self:flex-end;text-align:right;animation:msgInR .25s ease}
     @keyframes msgIn{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}
-    @keyframes msgInRight{from{opacity:0;transform:translateX(6px)}to{opacity:1;transform:translateX(0)}}
-    .msg-label{font-size:9px;letter-spacing:2px;color:var(--text-dim);margin-bottom:4px;font-family:var(--font-head);}
-    .msg.user .msg-label{color:rgba(255,60,172,0.6);}
-    .msg.error{border-left-color:var(--accent3);color:var(--accent3);}
-    .typing-indicator{display:none;align-self:flex-start;background:var(--bot-bg);border-left:2px solid var(--accent);padding:12px 16px;gap:5px;align-items:center;}
-    .typing-indicator.visible{display:flex;}
-    .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);animation:typingDot 1.2s infinite;}
-    .dot:nth-child(2){animation-delay:0.2s}.dot:nth-child(3){animation-delay:0.4s}
-    @keyframes typingDot{0%,100%{opacity:0.3;transform:scale(0.8)}50%{opacity:1;transform:scale(1.2)}}
-    .quick-replies{padding:8px 16px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--border);background:#090b10;}
-    .quick-replies p{width:100%;font-size:9px;color:var(--text-dim);letter-spacing:1px;margin-bottom:2px;}
-    .chip{font-family:var(--font-mono);font-size:10px;color:var(--accent);border:1px solid rgba(0,255,225,0.3);background:rgba(0,255,225,0.05);padding:4px 10px;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
-    .chip:hover{background:rgba(0,255,225,0.12);border-color:var(--accent);box-shadow:0 0 8px rgba(0,255,225,0.2);}
-    .chat-input-area{display:flex;align-items:center;border-top:1px solid var(--border);background:#0a0e14;flex-shrink:0;}
-    .prompt-symbol{padding:0 10px;color:var(--accent);font-size:14px;user-select:none;text-shadow:var(--glow);}
-    #userInput{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--font-mono);font-size:13px;padding:14px 0;caret-color:var(--accent);}
-    #userInput::placeholder{color:var(--text-dim);}
-    #sendBtn{background:none;border:none;cursor:pointer;padding:0 16px;font-family:var(--font-head);font-size:10px;color:var(--accent2);letter-spacing:1px;border-left:1px solid var(--border);height:100%;transition:all 0.15s;}
-    #sendBtn:hover{background:rgba(255,60,172,0.1);text-shadow:var(--glow2);}
-    #sendBtn:disabled{opacity:0.4;cursor:not-allowed;}
-    .chat-footer{text-align:center;font-size:9px;color:var(--text-dim);padding:6px;background:#090b10;border-top:1px solid var(--border);letter-spacing:1px;}
+    @keyframes msgInR{from{opacity:0;transform:translateX(6px)}to{opacity:1;transform:translateX(0)}}
+    .msg-label{font-size:9px;letter-spacing:2px;color:var(--text-dim);margin-bottom:4px;font-family:var(--font-head)}
+    .msg.user .msg-label{color:rgba(255,60,172,0.6)}
+    .msg.error{border-left-color:var(--accent3);color:var(--accent3)}
+    .typing-indicator{display:none;align-self:flex-start;background:var(--bot-bg);border-left:2px solid var(--accent);padding:12px 16px;gap:5px;align-items:center}
+    .typing-indicator.visible{display:flex}
+    .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);animation:td 1.2s infinite}
+    .dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
+    @keyframes td{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+    .quick-replies{padding:8px 16px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid var(--border);background:#090b10}
+    .quick-replies p{width:100%;font-size:9px;color:var(--text-dim);letter-spacing:1px;margin-bottom:2px}
+    .chip{font-family:var(--font-mono);font-size:10px;color:var(--accent);border:1px solid rgba(0,255,225,0.3);background:rgba(0,255,225,0.05);padding:4px 10px;cursor:pointer;transition:all .15s;white-space:nowrap}
+    .chip:hover{background:rgba(0,255,225,0.12);border-color:var(--accent);box-shadow:0 0 8px rgba(0,255,225,0.2)}
+    .chat-input-area{display:flex;align-items:center;border-top:1px solid var(--border);background:#0a0e14;flex-shrink:0}
+    .prompt-symbol{padding:0 10px;color:var(--accent);font-size:14px;user-select:none;text-shadow:var(--glow)}
+    #userInput{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--font-mono);font-size:13px;padding:14px 0;caret-color:var(--accent)}
+    #userInput::placeholder{color:var(--text-dim)}
+    #sendBtn{background:none;border:none;cursor:pointer;padding:0 16px;font-family:var(--font-head);font-size:10px;color:var(--accent2);letter-spacing:1px;border-left:1px solid var(--border);height:100%;transition:all .15s}
+    #sendBtn:hover{background:rgba(255,60,172,0.1);text-shadow:var(--glow2)}
+    #sendBtn:disabled{opacity:.4;cursor:not-allowed}
+    .chat-footer{text-align:center;font-size:9px;color:var(--text-dim);padding:6px;background:#090b10;border-top:1px solid var(--border);letter-spacing:1px}
   </style>
 </head>
 <body>
@@ -118,12 +84,12 @@
 
   <div class="quick-replies">
     <p>PREGUNTES RÀPIDES:</p>
-    <button class="chip" onclick="sendQuick('Quin és l\'horari?')">⏰ Horari</button>
-    <button class="chip" onclick="sendQuick('Quant costa l\'entrada?')">🎟️ Preu</button>
-    <button class="chip" onclick="sendQuick('Què he de portar?')">💼 Equipament</button>
-    <button class="chip" onclick="sendQuick('Hi ha torneigs?')">🏆 Torneigs</button>
-    <button class="chip" onclick="sendQuick('On se celebra?')">📍 Ubicació</button>
-    <button class="chip" onclick="sendQuick('Hi ha aparcament?')">🚗 Aparcar</button>
+    <button class="chip" onclick="sendQuick('Quin és l\'horari d\'accés?')">⏰ Horari</button>
+    <button class="chip" onclick="sendQuick('Quina documentació necessito?')">🪪 Documentació</button>
+    <button class="chip" onclick="sendQuick('Hi ha aparcament?')">🚗 Aparcament</button>
+    <button class="chip" onclick="sendQuick('Quants endolls tinc?')">🔌 Endolls</button>
+    <button class="chip" onclick="sendQuick('Com m\'inscric als tornejos?')">🏆 Tornejos</button>
+    <button class="chip" onclick="sendQuick('Hi ha dutxes?')">🚿 Dutxes</button>
   </div>
 
   <div class="chat-input-area">
@@ -137,9 +103,9 @@
 
 <script>
   // ══════════════════════════════════════════════════════════════
-  // CONFIGURACIÓ — canvia els valors següents pels teus
+  // CONFIGURACIÓ — canvia pels teus valors reals
   // ══════════════════════════════════════════════════════════════
-  const FAQS_URL = 'https://raw.githubusercontent.com/sergi-villanueva/ChatBot-LanParty/refs/heads/main/faqs.json';
+  const FAQS_URL = 'https://raw.githubusercontent.com/EL-TEU-USUARI/EL-TEU-REPO/main/faqs.json';
   // ══════════════════════════════════════════════════════════════
 
   let FAQS = [];
@@ -149,58 +115,81 @@
   const sendBtn         = document.getElementById('sendBtn');
   const typingIndicator = document.getElementById('typingIndicator');
 
-  // Carregar FAQs des del repositori GitHub
+  // ── Carregar FAQs ───────────────────────────────────────────
   async function carregarFaqs() {
     try {
       const res = await fetch(FAQS_URL);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       FAQS = await res.json();
-      console.log('FAQs carregades: ' + FAQS.length);
     } catch (err) {
-      console.error('Error carregant FAQs:', err);
       afegirError("No s'han pogut carregar les FAQs. Comprova la URL del repositori. 🔧");
       sendBtn.disabled = true;
       userInput.disabled = true;
     }
   }
 
-  // Normalitza el text: minúscules, sense accents, sense puntuació
-  function normalitzar(text) {
-    const accents = {'à':'a','á':'a','è':'e','é':'e','ì':'i','í':'i','ò':'o','ó':'o','ù':'u','ú':'u','ü':'u','ï':'i','ç':'c'};
+  // ── Normalitzar: minúscules, sense accents, sense puntuació ─
+  function norm(text) {
+    const map = {'à':'a','á':'a','â':'a','è':'e','é':'e','ê':'e','ì':'i','í':'i',
+                 'ï':'i','ò':'o','ó':'o','ö':'o','ù':'u','ú':'u','ü':'u','ç':'c'};
     let t = text.toLowerCase();
-    for (const [a, n] of Object.entries(accents)) t = t.replaceAll(a, n);
-    return t.replace(/[^\w\s]/g, ' ');
+    for (const [a,n] of Object.entries(map)) t = t.replaceAll(a,n);
+    return t.replace(/[^\w\s]/g,' ');
   }
 
-  // Motor de cerca: retorna la resposta més rellevant del faqs.json
+  // ── Motor de puntuació millorat ─────────────────────────────
+  // Estratègia:
+  //   1. Coincidència exacta de keyword com a paraula sencera → +3 pts
+  //   2. Coincidència de keyword com a subcadena              → +1 pt
+  //   3. La FAQ amb més puntuació PROPORCIONAL guanya
+  //      (punts / nº keywords) per evitar que FAQs amb molts
+  //      keywords genèrics guanyin per volum
+  //   4. Si empat, guanya la que tingui slug més específic
+  //      (urgència alta pesa una mica més)
   function cercarResposta(missatge) {
-    const norm    = normalitzar(missatge);
-    const paraules = new Set(norm.split(/\s+/).filter(Boolean));
-    let millorPunt = 0, millorFaq = null;
+    const normMsg  = norm(missatge);
+    const paraules = new Set(normMsg.split(/\s+/).filter(Boolean));
+
+    let millor = null;
+    let millorPunt = 0;
 
     for (const faq of FAQS) {
       let punt = 0;
       for (const kw of faq.keywords) {
-        const kwN = normalitzar(kw);
-        if (paraules.has(kwN))       punt += 2;
-        else if (norm.includes(kwN)) punt += 1;
+        const kwN = norm(kw);
+        if (paraules.has(kwN))        punt += 3;  // paraula exacta
+        else if (normMsg.includes(kwN)) punt += 1; // subcadena
       }
-      if (punt > millorPunt) { millorPunt = punt; millorFaq = faq; }
+      if (punt === 0) continue;
+
+      // Puntuació proporcional al nº de keywords per evitar biaixos
+      const proporcional = punt / faq.keywords.length;
+
+      // Desempat: urgència alta suma un petit bonus
+      const bonus = faq.urgencia === 'alta' ? 0.05 : 0;
+
+      const total = proporcional + bonus;
+
+      if (total > millorPunt) {
+        millorPunt = total;
+        millor = faq;
+      }
     }
 
-    if (millorPunt > 0) return millorFaq.resposta;
-    return "Ups, no he entès la teva pregunta! 🤔 Pots preguntar-me sobre: horaris, preus, equipament, internet, menjar, aparcament, torneigs, ubicació, dutxes o edat mínima. Si necessites més ajuda, contacta amb l'organització! 📧";
+    if (millor) return millor.resposta;
+
+    return "No he trobat resposta a la teva pregunta. 🤔 Prova a preguntar sobre: horaris, documentació, aparcament, xarxa, endolls, tornejos, dutxes, menjar o normes. Si necessites ajuda immediata, acosta't al Punt d'Informació Central! 📍";
   }
 
-  function escapeHtml(s) {
+  // ── UI helpers ──────────────────────────────────────────────
+  function esc(s) {
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
   }
 
   function afegirMissatge(text, tipus) {
-    const label = tipus === 'user' ? 'TU' : 'XATBOT2026';
     const div = document.createElement('div');
     div.className = 'msg ' + tipus;
-    div.innerHTML = '<div class="msg-label">' + label + '</div>' + escapeHtml(text);
+    div.innerHTML = '<div class="msg-label">' + (tipus==='user'?'TU':'XATBOT2026') + '</div>' + esc(text);
     messagesEl.appendChild(div);
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
@@ -208,18 +197,19 @@
   function afegirError(text) {
     const div = document.createElement('div');
     div.className = 'msg bot error';
-    div.innerHTML = '<div class="msg-label">⚠ ERROR</div>' + escapeHtml(text);
+    div.innerHTML = '<div class="msg-label">⚠ ERROR</div>' + esc(text);
     messagesEl.appendChild(div);
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  function setLoading(loading) {
-    sendBtn.disabled = loading;
-    userInput.disabled = loading;
-    typingIndicator.classList.toggle('visible', loading);
-    if (loading) messagesEl.scrollTop = messagesEl.scrollHeight;
+  function setLoading(v) {
+    sendBtn.disabled = v;
+    userInput.disabled = v;
+    typingIndicator.classList.toggle('visible', v);
+    if (v) messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
+  // ── Enviar ──────────────────────────────────────────────────
   function sendQuick(text) { userInput.value = text; sendMessage(); }
 
   userInput.addEventListener('keydown', e => {
@@ -232,7 +222,6 @@
     userInput.value = '';
     afegirMissatge(text, 'user');
     setLoading(true);
-    // Petit retard per simular "pensament"
     setTimeout(() => {
       afegirMissatge(cercarResposta(text), 'bot');
       setLoading(false);
